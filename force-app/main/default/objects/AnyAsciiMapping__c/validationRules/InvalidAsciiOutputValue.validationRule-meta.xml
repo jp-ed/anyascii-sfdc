@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InvalidAsciiOutputValue</fullName>
+    <active>true</active>
+    <description>Ensures that the converted value is part of the ASCII character set.</description>
+    <errorConditionFormula>NOT(REGEX(OutputValue__c, &quot;^[ -~]*$&quot;))</errorConditionFormula>
+    <errorDisplayField>OutputValue__c</errorDisplayField>
+    <errorMessage>Field contains one or more non-ASCII characters</errorMessage>
+</ValidationRule>

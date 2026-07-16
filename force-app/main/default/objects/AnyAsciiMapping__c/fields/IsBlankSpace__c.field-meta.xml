@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsBlankSpace__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>When checked, the Unicode input is replaced with a single space (U+0020).</inlineHelpText>
+    <label>Blank Space</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

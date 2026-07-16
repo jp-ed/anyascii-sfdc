@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InvalidNonAsciiInputValue</fullName>
+    <active>true</active>
+    <description>Ensures that the input value is not part of the ASCII character set.</description>
+    <errorConditionFormula>VALUE(CodePoint__c) &gt; 127
+&amp;&amp;
+NOT(ISBLANK(InputValue__c))
+&amp;&amp;
+REGEX(InputValue__c, &quot;^[ -~]*$&quot;)</errorConditionFormula>
+    <errorDisplayField>InputValue__c</errorDisplayField>
+    <errorMessage>Field contains one or more ASCII characters</errorMessage>
+</ValidationRule>

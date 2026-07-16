@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InvalidCodePoint</fullName>
+    <active>true</active>
+    <description>Requires that only numbers are used as the external ID.</description>
+    <errorConditionFormula>!ISNUMBER(CodePoint__c)</errorConditionFormula>
+    <errorDisplayField>CodePoint__c</errorDisplayField>
+    <errorMessage>This value must be a number</errorMessage>
+</ValidationRule>
